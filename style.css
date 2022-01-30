@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(#7808ac, #7f88ee);
+    padding: 0 0.25em;
+}
+
+.main-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    top: 15%;
+    border-radius: 5px;
+    max-width: 516px;
+}
+
+h1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgb(199, 199, 199);
+}
+
+form {
+    position: relative;
+}
+
+#todo-inp {
+    background-color: rgb(46, 46, 46);
+    border: none;
+    color: rgb(199, 199, 199);
+}
+
+#todo-inp::placeholder {
+    color: rgb(199, 199, 199);
+}
+
+.add-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: none;
+    padding: 0 0.5em;
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.todo-row + .todo-row {
+    margin-top: 0.5em;
+}
+
+.todo {
+    background-color: transparent !important;
+    color: rgb(199, 199, 199) !important;
+    padding: 0;
+    border: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+#edit {
+    color: white;
+}
+
+#delete {
+    color: rgb(112, 12, 12);
+}

@@ -64,6 +64,14 @@ form {
     border: none;
 }
 
+.todo:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 button {
     background-color: transparent;
     border: none;

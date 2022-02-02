@@ -1,6 +1,10 @@
 const form = document.querySelector('form');
 const inp = document.querySelector('#todo-inp');
 const todoContainer = document.querySelector('.todo-container');
+const pendingTasks = document.querySelector('.tasks-num');
+const clearBtn = document.querySelector('.clear-btn');
+
+let pendingNum = 0;
 
 const createTodo = (inp) => {
     // i created the save button here so that i cana reference it in the form event listener
@@ -71,13 +75,29 @@ const createTodo = (inp) => {
     buttonCont.append(deleteBtn);
 
     deleteBtn.addEventListener('click', () => {
-        deleteBtn.parentElement.parentElement.remove()
+        deleteBtn.parentElement.parentElement.remove();
+        pendingNum--;
+        pendingTasks.innerText = pendingNum;
     })
 
+
+    pendingNum++;
+    pendingTasks.innerText = pendingNum;
 }
+
+
 
 form.addEventListener('submit', e => {
     e.preventDefault();
     createTodo(inp);
     inp.value = '';
+})
+
+clearBtn.addEventListener('click', () => {
+    const allTodos = document.querySelectorAll('.todo-row');
+    for (let todo of allTodos) {
+        todo.remove();
+    }
+    pendingNum = 0;
+    pendingTasks.innerText = pendingNum;
 })

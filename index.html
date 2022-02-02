@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="main-container container py-4 px-3">
-        <div class="row mb-2">
+        <div class="row mb-3">
             <div class="col-12">
                 <h1>TODO App</h1>
             </div>
@@ -20,7 +20,7 @@
                 <form autocomplete="off">
                     <input type="text" class="form-control" placeholder="Add a Todo" id="todo-inp" required>
                     <button class="add-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
                         </svg>
                     </button>
@@ -55,8 +55,17 @@
                     </button>
                 </div>
             </div> -->
+        </div>
 
-
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-8">
+                    <p class="pending mb-0">Pending Tasks: <span class="tasks-num">0</span></p>
+                </div>
+                <div class="col-4 d-flex justify-content-end align-items-center">
+                    <button class="clear-btn">Clear</button>
+                </div>
+            </div>
         </div>
     </div>
     
